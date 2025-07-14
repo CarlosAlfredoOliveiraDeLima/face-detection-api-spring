@@ -9,6 +9,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class FaceDetectionService {
@@ -28,8 +30,11 @@ public class FaceDetectionService {
 
         String imageBase64 = convertToBase64(imageFile);
 
+        Map<String, String> request = new HashMap<>();
+        request.put("image", imageBase64);
+
         FaceDetectionResponse response;
-        response = faceRecognitionApiClient.detectFaces(imageBase64);
+        response = faceRecognitionApiClient.detectFaces(request);
 
         if (!response.isSuccess() || response.getProcessedImage() == null){
             throw new RuntimeException("Erro no processamento da imagem pelo Flask");
