@@ -1,4 +1,4 @@
-# 🎯 Face Detection API Java
+# Face Detection API Java
 
 Uma API REST em Java para detecção de rostos em imagens, projetada como uma camada intermediária (middleware) que se comunica com um microserviço Python para processamento de imagens e retorna as anotações visuais dos rostos detectados.
 
@@ -7,21 +7,21 @@ Uma API REST em Java para detecção de rostos em imagens, projetada como uma ca
 ![Spring Cloud](https://img.shields.io/badge/spring_cloud-2023.0.3-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 📋 Descrição
+## Descrição
 
 Este projeto é uma API REST construída com Spring Boot que serve como um middleware entre aplicações cliente e um microserviço de detecção de faces em uma imagem. A API recebe imagens via requisições HTTP, encaminha-as para processamento no serviço de detecção facial e retorna as imagens processadas com retângulos ao redor dos rostos identificados.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- ✅ Encaminhamento de imagens para processamento de detecção facial
-- ✅ Tratamento de múltiplos formatos de imagem
-- ✅ Conversão automática de imagens para base64
-- ✅ Retorno de imagens processadas com metadados
-- ✅ Exposição de informações de detecção via cabeçalhos HTTP personalizados
-- ✅ Tratamento de erros robusto com respostas apropriadas
-- ✅ Arquitetura limpa usando padrão MVC e DTO
+-  Encaminhamento de imagens para processamento de detecção facial
+-  Tratamento de múltiplos formatos de imagem
+-  Conversão automática de imagens para base64
+-  Retorno de imagens processadas com metadados
+-  Exposição de informações de detecção via cabeçalhos HTTP personalizados
+-  Tratamento de erros robusto com respostas apropriadas
+-  Arquitetura limpa usando padrão MVC e DTO
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **[Java 17](https://www.oracle.com/java/)** - Linguagem principal
 - **[Spring Boot 3.3.5](https://spring.io/projects/spring-boot)** - Framework web
@@ -29,13 +29,13 @@ Este projeto é uma API REST construída com Spring Boot que serve como um middl
 - **[Maven](https://maven.apache.org/)** - Gerenciamento de dependências e build
 - **[DTO Pattern](https://martinfowler.com/eaaCatalog/dataTransferObject.html)** - Padrão para transferência de dados
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - Java 17 ou superior
 - Maven 3.6 ou superior
 - Serviço Python de detecção facial em execução (porta 5000)
 
-## 🚀 Instalação
+## Instalação
 
 1. **Clone o repositório**
    ```bash
@@ -55,7 +55,7 @@ Este projeto é uma API REST construída com Spring Boot que serve como um middl
 
 A API estará disponível em `http://localhost:8080`
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 face-detection-api/
@@ -78,7 +78,7 @@ face-detection-api/
 └── README.md                                        # Este arquivo
 ```
 
-## 🔧 Como Usar
+## Como Usar
 
 ### Endpoint Principal
 
@@ -108,31 +108,31 @@ curl -X POST http://localhost:8080/api/faces/detect \
 ```
 
 
-## ⚙️ Configuração
+##️ Configuração
 
 A aplicação está configurada para conectar-se ao serviço Python de detecção facial na URL `http://localhost:5000`.
 
 Para alterar essa configuração, modifique a anotação `@FeignClient` no arquivo `FaceRecognitionApiClient.java`.
 
-## 🚨 Tratamento de Erros
+## Tratamento de Erros
 
 A API retorna os seguintes códigos de erro:
 
 - **400 Bad Request**: Quando a imagem está ausente ou não é válida
 - **500 Internal Server Error**: Quando ocorre um erro no processamento da imagem
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Autor
+## Autor
 
 - **Carlos Alfredo Oliveira de Lima** - [GitHub](https://github.com/CarlosAlfredoOliveiraDeLima)
 
-## 🔄 Integração
+## Integração
 
 Este projeto foi projetado para trabalhar em conjunto com um microserviço Python de detecção facial. Certifique-se de que o serviço Python esteja em execução na porta 5000 antes de iniciar esta API. - 
 [Aplicação Python/Flask](https://github.com/CarlosAlfredoOliveiraDeLima/face-detection-core-python)
 ---
 
-⭐ **Gostou do projeto? Deixe uma estrela!** ⭐
+ **Gostou do projeto? Deixe uma estrela!** 
