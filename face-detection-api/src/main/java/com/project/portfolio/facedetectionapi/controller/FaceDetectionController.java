@@ -15,7 +15,10 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/faces")
-@CrossOrigin(origins = "*")
+@CrossOrigin( //CORS = Cross-Origin Resource Sharing
+        origins = "*",
+        exposedHeaders = {"X-Faces-Count", "X-Success", "X-Format"}
+)
 public class FaceDetectionController {
 
     @Autowired
