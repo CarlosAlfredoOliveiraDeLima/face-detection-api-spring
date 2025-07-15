@@ -1,2 +1,5 @@
-# face-detection-api-spring
-Spring Boot API that receives images from the UI and forwards them to the face detection service
+Tecnologias usadas
+Spring Boot
+Spring Cloud Openfeign
+DTO - Data Transfer Objects
+Maven
